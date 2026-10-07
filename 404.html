@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>404 · Page not found · Webflow Cloud (Static HTML)</title>
+    <meta
+      name="description"
+      content="The page you're looking for could not be found on this static Webflow Cloud app."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wf-page">
+      <div class="wf-glow" aria-hidden="true"></div>
+
+      <header class="wf-header">
+        <div class="wf-brand">
+          <svg
+            width="28"
+            height="20"
+            viewBox="0 0 40 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-label="Webflow"
+            role="img"
+          >
+            <path
+              d="M40 0L25.95 27.6H12.75L18.6 16.2H18.35C13.5 22.55 6.3 26.75 0 27.6V16.35C0 16.35 3.95 16.1 6.3 13.65H0V0.005H11.25V9.3L11.5 9.3L16.05 0H24.55L23.65 8.15L25.2 8.15L29.25 0H40Z"
+              fill="url(#wf-mark)"
+            />
+            <defs>
+              <linearGradient id="wf-mark" x1="0" y1="0" x2="40" y2="28" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4353FF" />
+                <stop offset="1" stop-color="#146EF5" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="wf-brand-text">Webflow Cloud</span>
+        </div>
+        <nav class="wf-nav">
+          <a href="https://developers.webflow.com/webflow-cloud" target="_blank" rel="noreferrer">Docs</a>
+          <a href="https://github.com/Webflow-Examples" target="_blank" rel="noreferrer" class="wf-nav-ghost">GitHub</a>
+        </nav>
+      </header>
+
+      <main class="wf-main">
+        <section class="wf-hero">
+          <p class="wf-eyebrow">Error 404</p>
+          <h1 class="wf-title">
+            This page took a <span class="wf-gradient">wrong turn.</span>
+          </h1>
+          <p class="wf-subtitle">
+            We couldn't find the page you're looking for. It may have been moved, renamed, or
+            never existed. Check the URL, or head back to the homepage.
+          </p>
+          <div class="wf-cta">
+            <a class="wf-btn wf-btn-primary" href="./">Back to home</a>
+            <a
+              class="wf-btn wf-btn-ghost"
+              href="https://developers.webflow.com/webflow-cloud"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read the docs
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="wf-footer">
+        <span>
+          Built with static HTML · Deployed on
+          <a href="https://webflow.com/cloud" target="_blank" rel="noreferrer">Webflow Cloud</a>
+          · <span id="wf-year"></span>
+        </span>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

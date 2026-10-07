@@ -24,6 +24,7 @@ the Webflow Cloud documentation — matching the other `hello-world-*` examples 
 
 ```
 index.html      ← page markup (header, hero, doc cards, footer)
+404.html        ← branded "page not found" page (served for unmatched URLs)
 styles.css      ← .wf-* design tokens and layout (plain CSS)
 script.js       ← optional progressive enhancement (footer year)
 favicon.svg     ← Webflow mark
@@ -42,8 +43,17 @@ Or just open `index.html` in a browser.
 ## Editing the UI
 
 - **Page content (hero, CTAs, doc cards):** `index.html`
+- **Not-found page:** `404.html`
 - **Brand tokens and `.wf-*` styles:** `styles.css`
 - **Optional JS enhancement:** `script.js`
+
+## 404 handling
+
+`404.html` at the repo root is served for any unmatched URL with a `404` status.
+Webflow Cloud's static deploy config sets `assets.not_found_handling: "404-page"`, so the
+nearest `404.html` is used for misses; apps without one get a generic 404. The 404 lookup
+is internal to the served assets, so it works the same under any mount path. The "Back to
+home" link uses a relative `./` href for the same reason, so keep 404 asset paths relative.
 
 ## Deploying to Webflow Cloud
 

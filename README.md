@@ -29,6 +29,7 @@ Full walkthrough: <https://developers.webflow.com/webflow-cloud/quickstart>.
 ## What's included
 
 - `index.html` — the page markup
+- `404.html` — branded "page not found" page, served for unmatched URLs
 - `styles.css` — branded `wf-*` styles (plain CSS, no preprocessor)
 - `script.js` — tiny progressive enhancement (the page works without it)
 - `favicon.svg` — Webflow mark
@@ -37,6 +38,13 @@ Full walkthrough: <https://developers.webflow.com/webflow-cloud/quickstart>.
 
 Edit `index.html` for content and `styles.css` for styling. There is no compile step —
 save and reload.
+
+## Custom 404 page
+
+A `404.html` at the repo root is served for any URL that doesn't match a file, with a
+`404` status. Edit it like any other page; it reuses the same `wf-*` styles as the
+homepage. Remove it if you don't want a custom 404, and Webflow Cloud falls back to a
+generic one.
 
 ## Learn more
 
