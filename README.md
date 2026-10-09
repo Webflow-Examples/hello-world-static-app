@@ -42,9 +42,12 @@ save and reload.
 ## Custom 404 page
 
 A `404.html` at the repo root is served for any URL that doesn't match a file, with a
-`404` status. Edit it like any other page; it reuses the same `wf-*` styles as the
-homepage. Remove it if you don't want a custom 404, and Webflow Cloud falls back to a
+`404` status. Remove it if you don't want a custom 404, and Webflow Cloud falls back to a
 generic one.
+
+It's intentionally self-contained: CSS, script, and favicon are inlined. Because the page
+is served at the requested URL (not at `/404.html`), relative links would break on nested
+paths like `/foo/bar`, so everything the 404 needs lives in the one file.
 
 ## Learn more
 

@@ -51,9 +51,15 @@ Or just open `index.html` in a browser.
 
 `404.html` at the repo root is served for any unmatched URL with a `404` status.
 Webflow Cloud's static deploy config sets `assets.not_found_handling: "404-page"`, so the
-nearest `404.html` is used for misses; apps without one get a generic 404. The 404 lookup
-is internal to the served assets, so it works the same under any mount path. The "Back to
-home" link uses a relative `./` href for the same reason, so keep 404 asset paths relative.
+nearest `404.html` is used for misses; apps without one get a generic 404.
+
+`404.html` is intentionally **self-contained**: its CSS, script, and favicon are inlined
+instead of linked. Cloudflare serves it at the URL that was requested, not at `/404.html`,
+so a relative reference like `styles.css` would resolve against the request path and break
+on nested misses (`/foo/bar` would look for `/foo/styles.css`). Inlining keeps it styled at
+any depth. `index.html` still uses the shared `styles.css` and `script.js`. The "Back to
+home" link is an absolute `/` (site root); if you mount the app under a prefix and want it
+to return to the app root instead, point it at that prefix.
 
 ## Deploying to Webflow Cloud
 
